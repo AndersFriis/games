@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Add Game</h3>
+            <br>
+            <games-edit
+                games="gamesPageCtrl.editedGames"
+                save="gamesPageCtrl.saveGames(editedGames)"
+                />
+        </div>    
+        <div class="col-md-3 col-md-offset-">
+            <games-item 
+            ng-repeat="games in gamesPageCtrl.games track by games.id"
+            games="games"
+            delete="gamesPageCtrl.deleteGames(gamesToDelete)"
+            update="gamesPageCtrl.updateGames(gamesToUpdate)"
+            />    
+        </div>
+    </div>    
+</div>        

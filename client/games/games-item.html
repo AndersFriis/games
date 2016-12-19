@@ -1,0 +1,41 @@
+<div 
+    class="panel panel-default addchild-item"
+    ng-mouseover="addchildItemCtrl.setShowControls(true)"
+    ng-mouseout="addchildItemCtrl.setShowControls(false)"
+>
+    <div class="panel-body">
+        <p class="lead" ng-show="!addchildItemCtrl.editMode">
+            <h4><p>Title :</p>{{ gamesItemCtrl.games.title }} </h4>
+            <hr>
+            <h4><p>Genre :</p>{{ gamesItemCtrl.games.genre }}</h4>
+            <hr>
+            <h4><p>Platform :</p>{{ gamesItemCtrl.games.platform }}</h4>
+            <hr>
+            <h4><p>Year :</p>{{ gamesItemCtrl.games.year }}</h4>
+            
+            
+        </p>
+        <games-edit
+            ng-show="gamesItemCtrl.editMode"
+            games="gamesItemCtrl.gamesToEdit"
+            save="gamesItemCtrl.editGames(editedGames)"
+            cancel="gamesItemCtrl.setEditMode(false)"
+        />
+    </div>
+        
+        <div class="panel-footer clearfix">
+            <div class="pull-right">
+                {{ gamesItemCtrl.games.created | date:'medium'}}
+            </div>
+                <div class="games-item-controls" ng-show="gamesItemCtrl.showControls">
+                    <button class="btn btn-default" ng-click="gamesItemCtrl.setEditMode(true)">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </button>
+                    <button class="btn btn-danger" ng-click="gamesItemCtrl.deleteGames()">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+            
+
+                </div>
+        </div>
+</div>

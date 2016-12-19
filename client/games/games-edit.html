@@ -1,0 +1,41 @@
+<form ng-submit="gamesEditCtrl.saveGames()">
+    <div class="form-group">
+        <label>
+            Title
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="gamesEditCtrl.editedGames.title"
+            class="form-control"
+        ></textarea>
+
+        <label>
+            Genre
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="gamesEditCtrl.editedGames.genre"
+            class="form-control"
+        ></textarea>
+    
+    
+        <label>
+           Platform
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="gamesEditCtrl.editedGames.platform"
+            class="form-control" 
+        ></textarea>
+
+        <label>
+            Year
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="gamesEditCtrl.editedGames.year"
+            class="form-control"
+        ></textarea>
+    
+    </div>
+    
+    <button class="btn btn-primary" type="submit">
+        Save Your Childs Info
+    </button>
+</form>
