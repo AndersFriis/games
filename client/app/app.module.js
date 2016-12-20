@@ -3,7 +3,7 @@ import uiRouter from 'angular-ui-router';
 // import angularCookies from 'angular-cookies';
 
 
-import GamesModule from '../games/parent.module';
+import GamesModule from '../games/games.module';
 import FlashesModule from '../flashes/flashes.module';
 
 
@@ -22,6 +22,10 @@ const AppModule = angular.module('app', [
         $stateProvider
         .state('index', {
             url: '/',
+            component: 'gamesPage',
+
+        }).state('games', {
+            url: '/games/',
             component: 'gamesPage',
         });
     

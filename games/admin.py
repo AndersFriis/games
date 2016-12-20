@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Games
+
+class GamesAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name", "id",)}

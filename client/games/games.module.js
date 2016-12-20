@@ -3,7 +3,7 @@ import 'angular-resource';
 import FlashesModule from '../flashes/flashes.module';
 
 import gamesPageComponent from './games-page.component';
-import gamesComponent from './games-item.component';
+import gamesItemComponent from './games-item.component';
 import gamesEditComponent from './games-edit.component';
 
 import gamesAPIService from './games-api.service';

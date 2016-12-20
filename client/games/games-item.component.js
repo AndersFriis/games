@@ -9,7 +9,7 @@ const gamesItemComponent = {
         delete: '&',
         update: '&',
     },
-    controller: gamesItemController,
+    controller: GamesItemController,
     controllerAs: 'gamesItemCtrl',
 };
 
