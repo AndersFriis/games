@@ -26,12 +26,12 @@ function GamesPageController(gamesAPIService, flashesService, $interval) {
 
     ctrl.updateGames = function updateGames(gamesToUpdate) {
         gamesAPIService.games.update(gamesToUpdate).$promise.then(() => {
-            flashesService.displayMessage('Info Updated!');
+            flashesService.displayMessage('Game Updated!');
         });
     };
 
     ctrl.deleteGames = function deleteGames(gamesToDelete) {
-        const findAddchild = findIndex(item => gamesToDelete.id === item.id);
+        const findGames = findIndex(item => gamesToDelete.id === item.id);
         const index = findGames(ctrl.games);
 
         if (index !== -1) {
@@ -39,7 +39,7 @@ function GamesPageController(gamesAPIService, flashesService, $interval) {
         }
 
         gamesAPIService.games.delete(gamesToDelete).$promise.then(() => {
-            flashesService.displayMessage('Info Deleted');
+            flashesService.displayMessage('Game Deleted');
         });
     };
 }

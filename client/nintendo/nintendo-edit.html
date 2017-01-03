@@ -1,0 +1,41 @@
+<form ng-submit="nintendoEditCtrl.saveNintendo()">
+    <div class="form-group">
+        <label>
+            Title
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="nintendoEditCtrl.editedNintendo.title"
+            class="form-control"
+        ></textarea>
+
+        <label>
+            Genre
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="nintendoEditCtrl.editedNintendo.genre"
+            class="form-control"
+        ></textarea>
+    
+    
+        <label>
+           Platform
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="nintendoEditCtrl.editedNintendo.platform"
+            class="form-control" 
+        ></textarea>
+
+        <label>
+            Year
+        </label>
+        <textarea rows="2" cols="5"
+            ng-model="nintendoEditCtrl.editedNintendo.year"
+            class="form-control"
+        ></textarea>
+    
+    </div>
+    
+    <button class="btn btn-primary" type="submit">
+        Save Info
+    </button>
+</form>

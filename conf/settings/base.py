@@ -31,6 +31,9 @@ INSTALLED_APPS = (
     'core',
     'api',
     'games',
+    'nintendo',
+    'pc',
+    'xbox',
 )
 
 MIDDLEWARE_CLASSES = (

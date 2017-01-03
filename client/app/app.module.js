@@ -4,6 +4,7 @@ import uiRouter from 'angular-ui-router';
 
 
 import GamesModule from '../games/games.module';
+import NintendoModule from '../nintendo/nintendo.module';
 import FlashesModule from '../flashes/flashes.module';
 
 
@@ -12,6 +13,7 @@ import appComponent from './app.component';
 const AppModule = angular.module('app', [
     uiRouter,
     GamesModule.name,
+    NintendoModule.name,
     FlashesModule.name,
     
     
@@ -25,8 +27,13 @@ const AppModule = angular.module('app', [
             component: 'gamesPage',
 
         }).state('games', {
-            url: '/games/',
+            url: '/ps4/',
             component: 'gamesPage',
+        
+
+        }).state('nintendo', {
+            url: '/nintendo/',
+            component: 'nintendoPage',
         });
     
 

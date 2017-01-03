@@ -1,0 +1,41 @@
+<div 
+    class="panel panel-default nintendo-item"
+    ng-mouseover="nintendoItemCtrl.setShowControls(true)"
+    ng-mouseout="nintendoItemCtrl.setShowControls(false)"
+>
+    <div class="panel-body">
+        <p class="lead" ng-show="!nintendoItemCtrl.editMode">
+            <h4><p>Title :</p>{{ nintendoItemCtrl.nintendo.title }} </h4>
+            <hr>
+            <h4><p>Genre :</p>{{ nintendoItemCtrl.nintendo.genre }}</h4>
+            <hr>
+            <h4><p>Platform :</p>{{ nintendoItemCtrl.nintendo.platform }}</h4>
+            <hr>
+            <h4><p>Year :</p>{{ nintendoItemCtrl.nintendo.year }}</h4>
+            
+            
+        </p>
+        <nintendo-edit
+            ng-show="nintendoItemCtrl.editMode"
+            games="nintendoItemCtrl.nintendoToEdit"
+            save="nintendoItemCtrl.editNintendo(editedNintendo)"
+            cancel="nintendoItemCtrl.setEditMode(false)"
+        />
+    </div>
+        
+        <div class="panel-footer clearfix">
+            <div class="pull-right">
+                {{ nintendoItemCtrl.nintendo.created | date:'medium'}}
+            </div>
+                <div class="nintendo-item-controls" ng-show="nintendoItemCtrl.showControls">
+                    <button class="btn btn-default" ng-click="nintendoItemCtrl.setEditMode(true)">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </button>
+                    <button class="btn btn-danger" ng-click="nintendoItemCtrl.deleteNintendo()">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+            
+
+                </div>
+        </div>
+</div>

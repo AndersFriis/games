@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Add Game</h3>
+            <br>
+            <nintendo-edit
+                nintendo="nintendoPageCtrl.editedNintendo"
+                save="nintendoPageCtrl.saveNintendo(editedNintendo)"
+                />
+        </div>    
+        <div class="col-md-3 col-md-offset-">
+            <nintendo-item 
+            ng-repeat="nintendo in nintendoPageCtrl.nintendo track by nintendo.id"
+            nintendo="nintendo"
+            delete="nintendoPageCtrl.deleteNintendo(nintendoToDelete)"
+            update="nintendoPageCtrl.updateNintendo(nintendoToUpdate)"
+            />    
+        </div>
+    </div>    
+</div>        
+
